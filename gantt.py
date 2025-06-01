@@ -4,8 +4,6 @@ import plotly.graph_objects as go
 import numpy as np
 import pandas as pd
 
-from dash import Dash, dcc, html
-
 
 # Load the data (see section above)
 df = pd.read_csv("example.csv", dtype=str)
@@ -17,7 +15,7 @@ df['Labelling'] = np.where(
     df['Task'] + ", Dependencies: " + df["Dependencies"]
 )
 
-# Order as I want plotted
+# Order as I want plotted (will be sorted by 'resource' in plot though)
 df = df.sort_values("Start", ascending=False)
 
 # Plot
@@ -34,14 +32,3 @@ fig = px.timeline(
 )
 
 fig.show()
-
-# # Wraps Dash around the plot
-# fig = go.Figure(fig)
-
-# # Dash stuff, create the app and start it
-# app = Dash()
-# app.layout = html.Div([
-#     dcc.Graph(figure=fig)
-# ])
-
-# app.run_server(debug=True, use_reloader=True)

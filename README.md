@@ -26,3 +26,4 @@ python gantt.py
 ## To be added if I remember
 
 - I want to instead define a start date, dependencies and weeks taken for tasks and have the software figure out the task start dates for me.
+- If I've gone this far, might as well add a way of editing tasks through a web interface/Dash.
