@@ -4,6 +4,8 @@ Gantt chart generation using Plotly, following [this Plotly guide](https://plotl
 
 And then adding some bits.
 
+![Example of Gantt chart visualisation created](example_gantt.png?raw=true "Blimp Game")
+
 ## Setup
 ```bash
 python -m venv env
